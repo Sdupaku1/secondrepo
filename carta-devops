@@ -1,0 +1,35 @@
+#! /bin/sh
+
+function help_menu {
+    cat README.md
+}
+
+function tasks_display {
+    cat TASKS.md
+}
+
+function unit_tests {
+    pytest tests/*
+}
+
+function serve {
+    python app/
+}
+
+if [[ $# -eq 0 ]] ; then
+    help_menu
+    exit 0
+fi
+
+case "$1" in
+    help) help_menu & ;;
+    test) unit_tests & ;;
+    serve) serve & ;;
+    tasks) tasks_display & ;;
+    x) cat /var/secret.txt & ;;
+    *) help_menu &;;
+esac
+
+child=$! 
+wait "$child" 
+#2> /dev/null
