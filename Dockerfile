@@ -10,5 +10,4 @@ RUN pip install nginx
 EXPOSE 5000
 COPY /app/templates/index.html /var/www/html/index.html
 VOLUME /var/www/html
-ENTRYPOINT [ "sh" ]
-CMD [ "carta-devops","serve" ] 
+CMD [ "./carta-devops","serve" ] 
