@@ -6,7 +6,7 @@ ENV PATH="/carta/devops:${PATH}"
 COPY . .
 RUN mv secret.txt /var/secret.txt
 RUN pip install -r requirements.txt
-RUN yum install -y nginx
+RUN pip install nginx
 EXPOSE 5000
 COPY /app/templates/index.html /var/www/html/index.html
 VOLUME /var/www/html
