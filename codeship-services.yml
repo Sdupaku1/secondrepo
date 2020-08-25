@@ -1,8 +1,5 @@
 app:
   build:
     image: sudhadn/pythonapp
-    context: app
     dockerfile: Dockerfile
-    args:
-      build_env: production
-  cachhed: true
+  cached: true
