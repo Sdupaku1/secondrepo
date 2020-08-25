@@ -9,7 +9,7 @@ function tasks_display {
 }
 
 function unit_tests {
-    pytest tests/*
+    py.test tests/*
 }
 
 function serve {
