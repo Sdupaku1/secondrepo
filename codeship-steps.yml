@@ -12,5 +12,5 @@
   registry: https://index.docker.io/v1/
   encrypted_dockercfg_path: dockercfg.encrypted
 - name: serve
-  serivce: app
+  service: app
   command: sh carta-devops serve
