@@ -1,6 +1,6 @@
-- name: build
-  service: app
-  command: sh carta-devops serve
+#- name: build
+#  service: app
+#  command: sh carta-devops serve
 - name: test
   service: app
   tag: master
@@ -11,3 +11,6 @@
   image_name: sudhadn/secondrepo
   registry: https://index.docker.io/v1/
   encrypted_dockercfg_path: dockercfg.encrypted
+- name: serve
+  serivce: app
+  command: sh carta-devops serve
